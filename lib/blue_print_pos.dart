@@ -136,6 +136,32 @@ class BluePrintPos {
     _printProcess(byteBuffer);
   }
 
+  /// This method only for print text
+  /// value and styling inside model [ReceiptSectionText].
+  /// [feedCount] to create more space after printing process done
+  /// [useCut] to cut printing process
+  Future<void> printHtml(
+      String html, {
+        int feedCount = 0,
+        bool useCut = false,
+        bool useRaster = false,
+        double duration = 0,
+        PaperSize paperSize = PaperSize.mm58,
+      }) async {
+    final Uint8List bytes = await contentToImage(
+      content: html,
+      duration: duration,
+    );
+    final List<int> byteBuffer = await _getBytes(
+      bytes,
+      paperSize: paperSize,
+      feedCount: feedCount,
+      useCut: useCut,
+      useRaster: useRaster,
+    );
+    _printProcess(byteBuffer);
+  }
+
   /// This method only for print image with parameter [bytes] in List<int>
   /// define [width] to custom width of image, default value is 120
   /// [feedCount] to create more space after printing process done
