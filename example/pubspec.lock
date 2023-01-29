@@ -28,7 +28,7 @@ packages:
     dependency: transitive
     description:
       path: "."
-      ref: master
+      ref: d183d1d74111b1925f330daf378d3ed72ce039c6
       resolved-ref: d183d1d74111b1925f330daf378d3ed72ce039c6
       url: "https://github.com/kakzaki/blue_thermal_printer.git"
     source: git

@@ -13,7 +13,8 @@ dependencies:
   blue_thermal_printer:
     git:
       url: 'https://github.com/kakzaki/blue_thermal_printer.git'
-      ref: 'master'
+      ref: 'd183d1d74111b1925f330daf378d3ed72ce039c6'
+
   # Utilities for generate ByteBuffer
   esc_pos_utils_plus: ^2.0.1+6
   # Framework
